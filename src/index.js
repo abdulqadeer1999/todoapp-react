@@ -5,46 +5,80 @@ import './index.css';
 
 
 
-function Todo () {
-const [data, setData] = React.useState([]);
+function Todo() {
+  const [data, setData] = React.useState([]);
 
 
   function post(event) {
-      event.preventDefault();
-      let post = document.getElementById("post").value;
-   setData([...data,post]);
-   document.getElementById('post').value = ''
+    event.preventDefault();
+    let post = document.getElementById("post").value;
+    setData([...data, post]);
+    document.getElementById('post').value = ''
 
-    
+
     console.log(post)
-      console.log(data);
+    console.log(data);
 
 
+  };
+
+
+
+
+  const remove = (i) => {
+
+    let todo = ([...data])
+    todo.splice(i)
+    setData(todo)
+
+  };
+
+
+
+
+  const delete1 =  (v)  =>{
+
+    let todo1 =  [...data]
+    todo1.splice(v,1)
+    setData(todo1)
     
-    
-  }
-    return <div>
-       
-         <input type= "text" placeholder="enter task" id= "post" />
-         <button onClick= {post}>Add</button>
 
+  };
+
+  const edit = () => {
         
-      {
-        data.map((v,i)=>{
-          return(
-            <div>{v}</div>
-          )
-        })
-      }
+  }
+
+
+  return <div className="input">
+
+    <input  type="text" placeholder="enter task" id="post" />
+    <button  onClick={post}>Add</button>
+    <button className="delete" onClick={remove}>Delete All</button>
+
 
     
-</div>
+
+
+
+    {
+      data.map((v, i) => {
+        return (
+          <div>
+            {v} <button className="delete1" onClick={delete1}>Delete1</button></div>
+
+        )
+      })
+
+    }
+
+
+  </div>
 }
-ReactDOM.render(<Todo/>,
+ReactDOM.render(<Todo />,
 
-  document.getElementById("root")  
-  )
+  document.getElementById("root")
+)
 
 
 
-   
