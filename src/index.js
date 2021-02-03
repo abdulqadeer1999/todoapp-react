@@ -45,8 +45,12 @@ function Todo() {
 
   };
 
-  const edit = () => {
+  const edit = (v) => {
         
+    // let edit =  [...data]
+    // edit.push(v,1)
+    // setData(edit)
+    
   }
 
 
@@ -65,7 +69,9 @@ function Todo() {
       data.map((v, i) => {
         return (
           <div>
-            {v} <button className="delete1" onClick={delete1}>Delete1</button></div>
+            {v} <button className="delete1" onClick={delete1}>Delete1</button>
+            <button  onClick={edit}>edit </button>
+            </div>
 
         )
       })
