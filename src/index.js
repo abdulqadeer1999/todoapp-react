@@ -11,16 +11,17 @@ function Todo() {
 
   function post(event) {
     event.preventDefault();
-    let post = document.getElementById("post").value;
+    var post = document.getElementById("post").value;
+    
     setData([...data, post]);
     document.getElementById('post').value = ''
 
-
-    console.log(post)
-    console.log(data);
+    // console.log(post)
+    // console.log(data);
 
 
   };
+
 
 
 
@@ -39,27 +40,31 @@ function Todo() {
   const delete1 =  (v)  =>{
 
     let todo1 =  [...data]
-    todo1.splice(v,1)
+    todo1.splice(v)
     setData(todo1)
     
 
   };
 
-  const edit = (v) => {
-        
-    // let edit =  [...data]
-    // edit.push(v,1)
-    // setData(edit)
+
+
+  
+
+  // const edit = () => {
+  //     v  
+  //   // let edit =  [...data]
+  //   // edit.push(,1)
+  //   // setData(edit)
     
-  }
+  // }
 
 
   return <div className="input">
-
-    <input  type="text" placeholder="enter task" id="post" />
-    <button  onClick={post}>Add</button>
+<form onSubmit = {post}>
+    <input  type="text" placeholder="enter task" id="post" required="required" />
+    <button className = "addbtn">Add</button>
     <button className="delete" onClick={remove}>Delete All</button>
-
+    </form>
 
     
 
@@ -70,7 +75,7 @@ function Todo() {
         return (
           <div>
             {v} <button className="delete1" onClick={delete1}>Delete1</button>
-            <button  onClick={edit}>edit </button>
+            {/* <button  onClick={edit}>edit </button> */}
             </div>
 
         )

@@ -16,11 +16,19 @@ code {
 .delete1 {
   margin: 20px;
   margin-top: 10px;
+  color: red;
 }
 .delete{
   margin: 30px;
+  color: red;
+}
+
+.addbtn {
+  color: green;
+  margin: 20px;
 }
 
 .input {
   text-align:center;
+  color: greenyellow;
 }
