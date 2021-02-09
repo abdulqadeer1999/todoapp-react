@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 
@@ -59,11 +60,20 @@ function Todo() {
   // }
 
 
-  return <div className="input">
+  return <div className= "input">
 <form onSubmit = {post}>
+
+   
+  
+ 
     <input  type="text" placeholder="enter task" id="post" required="required" />
-    <button className = "addbtn">Add</button>
-    <button className="delete" onClick={remove}>Delete All</button>
+    <button  className="btn btn-outline-primary">Add</button>
+    {/* <button className = "addbtn">Add</button> */}
+
+    <button  className="btn btn-outline-danger" onClick ={remove} >Danger</button>
+    {/* <button className="delete" onClick={remove}>Delete All</button> */}
+  
+    
     </form>
 
     
@@ -75,7 +85,9 @@ function Todo() {
         return (
           <div>
             {v} <button className="delete1" onClick={delete1}>Delete1</button>
+           {/* {v} <button  className="btn btn-outline-warning" onClick={delete1}  >Warning</button> */}
             {/* <button  onClick={edit}>edit </button> */}
+          
             </div>
 
         )
