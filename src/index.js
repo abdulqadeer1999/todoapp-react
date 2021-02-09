@@ -41,7 +41,7 @@ function Todo() {
   const delete1 =  (v)  =>{
 
     let todo1 =  [...data]
-    todo1.splice(v)
+    todo1.splice(v,1)
     setData(todo1)
     
 
@@ -64,13 +64,17 @@ function Todo() {
 <form onSubmit = {post}>
 
    
-  
+
  
-    <input  type="text" placeholder="enter task" id="post" required="required" />
+    
+<input type="text" className="form-control" placeholder="Enter your task" id="post" aria-label="" aria-describedby="basic-addon1" required="required" />
+
+ 
+    {/* <input  type="text" placeholder="enter task" id="post" required="required" /> */}
     <button  className="btn btn-outline-primary">Add</button>
     {/* <button className = "addbtn">Add</button> */}
 
-    <button  className="btn btn-outline-danger" onClick ={remove} >Danger</button>
+    <button  className="btn btn-outline-danger" onClick ={remove} >Delete All</button>
     {/* <button className="delete" onClick={remove}>Delete All</button> */}
   
     
@@ -84,8 +88,8 @@ function Todo() {
       data.map((v, i) => {
         return (
           <div>
-            {v} <button className="delete1" onClick={delete1}>Delete1</button>
-           {/* {v} <button  className="btn btn-outline-warning" onClick={delete1}  >Warning</button> */}
+            {/* {v} <button className="delete1" onClick={delete1}>Delete1</button> */}
+           {v} <button  className="btn btn-outline-warning" onClick={delete1} >Delete</button>
             {/* <button  onClick={edit}>edit </button> */}
           
             </div>

@@ -18,17 +18,28 @@ code {
   margin-top: 10px;
   color: red;
 }
-.delete{
+/* .delete{
   margin: 30px;
   color: red;
-}
+} */
 
 .btn  {
-  color: green;
-  margin: 20px;
-}
+  color: green; 
+  margin: 20px; 
+  /* margin-bottom: 300px;  */
+   
+} 
 
 .input {
   text-align:center;
   color: greenyellow;
+}
+
+
+
+.form-control{
+  width: 30%;
+  margin-top: 60px;
+  /* text-align: center; */
+  margin-left: 300px;
 }
