@@ -23,13 +23,25 @@ code {
   color: red;
 } */
 
-.btn  {
+.btn-outline-primary  {
   color: green; 
-  margin: 20px; 
-  /* margin-bottom: 300px;  */
+  margin: 10px; 
+  width: 100px;
+  margin-top: -60px;
+  margin-left: 30px;
+ 
    
 } 
 
+.btn-outline-warning {
+  margin:10px;
+}
+
+
+ .btn-outline-danger {
+
+  margin-top: -70px;
+ }
 .input {
   text-align:center;
   color: greenyellow;
@@ -41,5 +53,13 @@ code {
   width: 30%;
   margin-top: 60px;
   /* text-align: center; */
-  margin-left: 300px;
+  margin-left: 100px;
+}
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media only screen and (min-width: 200px) {
+  .btn-outline-dange, .btn-outline-warning, .btn-outline-primary {
+    width: 100px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }

@@ -71,7 +71,7 @@ function Todo() {
 
  
     {/* <input  type="text" placeholder="enter task" id="post" required="required" /> */}
-    <button  className="btn btn-outline-primary">Add</button>
+    <button  className="btn btn-outline-primary" >Add</button>
     {/* <button className = "addbtn">Add</button> */}
 
     <button  className="btn btn-outline-danger" onClick ={remove} >Delete All</button>
